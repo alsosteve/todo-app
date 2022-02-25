@@ -1,11 +1,16 @@
 import React from 'react';
 
+// import 'normalize.css';
+
+import Context from './context/settings/context.js';
 import ToDo from './components/todo/todo.js';
 
-export default class App extends React.Component {
-  render() {
+export default function App() {
     return (
-      <ToDo />
+      <>
+        <Context>
+          <ToDo />
+        </Context>
+      </>
     );
-  }
 }
